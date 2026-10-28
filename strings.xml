@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RAHAMAN KHATA</string>
+    <string name="tagline">Digital Shop Ledger</string>
+    <string name="total_receivable">You will get</string>
+    <string name="total_payable">You will give</string>
+    <string name="give_credit">Give Credit</string>
+    <string name="receive_payment">Receive Payment</string>
+    <string name="add_customer">Add Customer</string>
+    <string name="expenses">Business Expenses</string>
+    <string name="reports">Reports</string>
+    <string name="settings">Settings</string>
+</resources>
