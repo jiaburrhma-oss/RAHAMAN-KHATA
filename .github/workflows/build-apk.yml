@@ -1,3 +1,4 @@
+
 name: Build RAHAMAN KHATA APK
 
 on:
@@ -12,7 +13,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout project
         uses: actions/checkout@v4
@@ -23,4 +23,16 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Build
+      - name: Build APK
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: RAHAMAN-KHATA-APK
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+          retention-days: 7
+          
