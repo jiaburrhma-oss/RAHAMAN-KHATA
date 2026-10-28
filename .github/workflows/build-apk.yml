@@ -17,15 +17,4 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - name: Build APK
-        run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: RAHAMAN-KHATA-APK
-          path: app/build/outputs/apk/debug/*.apk
-          if-no-files-found: error
-          retention-days: 7
-          
+      - name: Build
